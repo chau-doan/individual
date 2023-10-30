@@ -1,0 +1,14 @@
+<ArrayList>
+  <item>
+    <cardType>American Express</cardType>
+    <cardNumber>341242424242424</cardNumber>
+  </item>
+  <item>
+    <cardType>Discover</cardType>
+    <cardNumber>6011424242424243</cardNumber>
+  </item>
+  <item>
+    <cardType>MasterCard</cardType>
+    <cardNumber>5242424242424244</cardNumber>
+  </item>
+</ArrayList>

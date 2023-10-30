@@ -1,0 +1,27 @@
+[
+  {
+    "cardNumber": "4343434343434343",
+    "cardHolder": "Nhi",
+    "expirationDate": "08/2020"
+  },
+  {
+    "cardNumber": "1212121212121212",
+    "cardHolder": "Chau",
+    "expirationDate": "08/2021"
+  },
+  {
+    "cardNumber": "5212123412341234",
+    "cardHolder": "Huy",
+    "expirationDate": "08/2022"
+  },
+  {
+    "cardNumber": "341234123412341",
+    "cardHolder": "Ti",
+    "expirationDate": "08/2023"
+  },
+  {
+    "cardNumber": "6011123412341234",
+    "cardHolder": "Nhat",
+    "expirationDate": "08/2024"
+  }
+]

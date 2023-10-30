@@ -1,0 +1,17 @@
+<root>
+  <record>
+    <cardNumber>341242424242424</cardNumber>
+    <cardHolder>Chau</cardHolder>
+    <expirationDate>08/2022</expirationDate>
+  </record>
+  <record>
+    <cardNumber>6011424242424243</cardNumber>
+    <cardHolder>Huy</cardHolder>
+    <expirationDate>09/2022</expirationDate>
+  </record>
+  <record>
+    <cardNumber>5242424242424244</cardNumber>
+    <cardHolder>Nhat</cardHolder>
+    <expirationDate>10/2022</expirationDate>
+  </record>
+</root>

@@ -9,7 +9,7 @@ import com.ltp.cards.DiscoverCC;
 import com.ltp.cards.MasterCC;
 import com.ltp.cards.VisaCC;
 
-public class CreditCardTestCSV {
+public class CreditCardTest {
   @Test
   public void testAmExCCIsValid() {
     CreditCard amExCC = new AmExCC("347123456789012", "John Doe", "12/24");
