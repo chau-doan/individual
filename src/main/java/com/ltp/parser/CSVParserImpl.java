@@ -18,8 +18,8 @@ public class CSVParserImpl implements CreditCardParser{
         
         Map<String, String> record = new HashMap<>();
         record.put("cardNumber", csvRecord.get(0));
-        record.put("cardHolder", csvRecord.get(1));
-        record.put("expirationDate", csvRecord.get(2));
+        record.put("cardHolder", csvRecord.get(2));
+        record.put("expirationDate", csvRecord.get(1));
         records.add(record);
       }
     } catch (IOException e) {

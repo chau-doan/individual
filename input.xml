@@ -14,4 +14,9 @@
     <cardHolder>Nhat</cardHolder>
     <expirationDate>10/2022</expirationDate>
   </record>
+  <record>
+    <cardNumber>1212121212121212</cardNumber>
+    <cardHolder>Nhi</cardHolder>
+    <expirationDate>11/2022</expirationDate>
+  </record>
 </root>

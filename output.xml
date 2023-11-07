@@ -11,4 +11,8 @@
     <cardType>MasterCard</cardType>
     <cardNumber>5242424242424244</cardNumber>
   </item>
+  <item>
+    <cardType>Invalid: not a possible card number</cardType>
+    <cardNumber>1212121212121212</cardNumber>
+  </item>
 </ArrayList>

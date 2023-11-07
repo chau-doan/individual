@@ -1,16 +1,1 @@
-[ {
-  "cardType" : "Visa",
-  "cardNumber" : "4343434343434343"
-}, {
-  "cardHolder" : "error",
-  "cardNumber" : "1212121212121212"
-}, {
-  "cardType" : "MasterCard",
-  "cardNumber" : "5212123412341234"
-}, {
-  "cardType" : "American Express",
-  "cardNumber" : "341234123412341"
-}, {
-  "cardType" : "Discover",
-  "cardNumber" : "6011123412341234"
-} ]
+[ ]

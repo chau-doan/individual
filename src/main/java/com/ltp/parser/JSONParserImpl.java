@@ -19,7 +19,10 @@ public class JSONParserImpl implements CreditCardParser{
       ObjectMapper objectMapper = new ObjectMapper();
       List<Map<String, Object>> jsonData = objectMapper.readValue(new File(inputFileName), new TypeReference<List<Map<String, Object>>>() {});
 
+      System.out.println(jsonData);
       for (Map<String, Object> jsonRecord : jsonData) {
+              System.out.println(jsonRecord);
+
         Map<String, String> record = new HashMap<>();
         record.put("cardNumber", String.valueOf(jsonRecord.get("cardNumber")));
         record.put("cardHolder", String.valueOf(jsonRecord.get("cardHolder")));
@@ -32,6 +35,7 @@ public class JSONParserImpl implements CreditCardParser{
 
     return records;
   }
+  
 
   @Override
   public void write(String outputFileName, List<Map<String, String>> data) {

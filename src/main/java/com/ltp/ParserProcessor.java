@@ -39,7 +39,7 @@ public class ParserProcessor {
         } else {
           Map<String, String> error = new HashMap<>();
           error.put("cardNumber", entry.get("cardNumber"));
-          error.put("cardHolder", "error");
+          error.put("cardType", "error");
           outputRecords.add(error);
 
           // throw new Exception("Invalid credit card: " + entry.get("cardNumber"));
@@ -52,36 +52,4 @@ public class ParserProcessor {
     }
   }
 }
-  // private final CreditCardProcessor cardCreate = new CreditCardProcessor();
-  // private CreditCardParser parser;
-  // private List<Map<String, String>> record;
-  // private String input;
-  // private String output;
-
-  
-  // public ParserProcessor(String input, String output){
-  //   this.output = output;
-  //   this.input = input;
-  //   record = new ArrayList<>();
-  // }
-
-  // public void setParser(CreditCardParser parser){
-  //   this.parser = parser;
-  // }
-
-  // public void processData(){
-  //   List<Map<String, String>> data = parser.read(input);
-  //   for (Map<String, String> entry : data){
-  //     CreditCardCreator creditCard = cardCreate.createCreditCard(entry.get("cardNumber"), entry.get("cardHolder"), entry.get("expiartionDate"));
-  //     if (creditCard != null){
-  //       record.add(creditCard.generateOutput());
-  //     } else {
-  //       Map<String, String> err = new HashMap<>();
-  //       err.put("cardNumber", entry.get("cardNumber"));
-  //       err.put("cardType", "error");
-  //       record.add(err);
-  //     }
-  //   }
-  //   parser.write(output, record);
-  // }
 

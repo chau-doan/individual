@@ -2,16 +2,19 @@ package com.ltp.factory;
 
 public class CreditCardProcessor{
   public CreditCardCreator createCreditCard(String cardNumber, String cardHolder, String expirationDate) {
-    if (cardNumber.charAt(0) == '4' && (cardNumber.length() == 13 || cardNumber.length() == 16)) {
+    if (cardNumber == null) 
+      return new ErrorCCFactory(cardNumber, cardHolder, expirationDate);
+      
+    if (cardNumber.matches("^4[0-9]{12}(?:[0-9]{3})?$")) {
       return new VisaCCFactory(cardNumber, cardHolder, expirationDate);
-    } else if (cardNumber.charAt(0) == '5' && cardNumber.charAt(1) >= '1' && cardNumber.charAt(1) <= '5' && cardNumber.length() == 16) {
+    } else if (cardNumber.matches("^5[1-5][0-9]{14}$")) {
         return new MasterCCFactory(cardNumber, cardHolder, expirationDate);
-    } else if (cardNumber.startsWith("6011") && cardNumber.length() == 16) {
+    } else if (cardNumber.matches("^6011[0-9]{12}$")) {
         return new DiscoverCCFactory(cardNumber, cardHolder, expirationDate);
-    } else if (cardNumber.charAt(0) == '3' && (cardNumber.charAt(1) == '4' || cardNumber.charAt(1) == '7') && cardNumber.length() == 15) {
+    } else if (cardNumber.matches("^3[47][0-9]{13}$")) {
         return new AmExCCFactory(cardNumber, cardHolder, expirationDate);
     } else {
-        return null;
+        return new ErrorCCFactory(cardNumber, cardHolder, expirationDate);
     }
   };
 }

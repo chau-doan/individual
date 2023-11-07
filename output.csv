@@ -1,4 +1,13 @@
 cardType,cardNumber
-American Express,341242424242424
-Discover,6011424242424243
-MasterCard,5242424242424244
+MasterCard,5567894523129080
+Invalid: more than 19 digits,59012345678901200000000
+Visa,4123456789123
+American Express,347856341908126
+Discover,6011111100007750
+Invalid: not a possible card number,3601112345678780
+MasterCard,5167894523129080
+Visa,4123456789123990
+American Express,377856341908126
+MasterCard,5367894523129080
+Invalid: non numeric characters,6011*890HJrt6789
+Invalid: empty/null card number,
