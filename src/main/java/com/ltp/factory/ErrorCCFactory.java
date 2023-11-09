@@ -27,8 +27,8 @@ public class ErrorCCFactory extends CreditCardCreator {
 
   private String checkError() {
     if (cardNumber == null || cardNumber.isEmpty()) return "Invalid: empty/null card number";
-    if (cardNumber.matches(".*\\D.*")) return "Invalid: non numeric characters";
-    if (cardNumber.length() >= 19) return "Invalid: more than 19 digits";
-    return "Invalid: not a possible card number";
+    if (cardNumber.matches(".*\\D.*")) return "invalid: non numeric characters";
+    if (cardNumber.length() >= 19) return "invalid: more than 19 digits";
+    return "invalid: not a possible card number";
   } 
 }
