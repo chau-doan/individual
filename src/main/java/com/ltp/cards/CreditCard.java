@@ -9,7 +9,7 @@ import lombok.*;
 
 public abstract class CreditCard {
   private String cardNumber;
-  private String cardHolder;
+  private String cardHolderName;
   private String expirationDate;
 
   public abstract boolean isValid();

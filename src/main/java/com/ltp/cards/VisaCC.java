@@ -5,8 +5,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class VisaCC extends CreditCard{
-  public VisaCC(String cardNumber, String cardHolder, String expirationDate) {
-    super(cardNumber, cardHolder, expirationDate);
+  public VisaCC(String cardNumber, String cardHolderName, String expirationDate) {
+    super(cardNumber, cardHolderName, expirationDate);
   }
 
   public boolean isValid() {

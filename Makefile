@@ -6,4 +6,4 @@ run:
 
 build-and-run:
 	mvn package
-	java -jar ./target/individual-project-1.0-SNAPSHOT.jar ${input}
+	java -jar ./target/individual-project-1.0-SNAPSHOT.jar ${input} ${output}

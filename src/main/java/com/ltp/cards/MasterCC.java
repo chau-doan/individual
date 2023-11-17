@@ -2,8 +2,8 @@ package com.ltp.cards;
 
 public class MasterCC extends CreditCard{
 
-  public MasterCC(String cardNumber, String cardHolder, String expirationDate) {
-    super(cardNumber, cardHolder, expirationDate);
+  public MasterCC(String cardNumber, String cardHolderName, String expirationDate) {
+    super(cardNumber, cardHolderName, expirationDate);
   }
 
   public boolean isValid() {

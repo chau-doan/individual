@@ -8,25 +8,26 @@ import com.ltp.parser.XMLParserImpl;
 public class Main{
   public static void main(String[] args) throws Exception {
     String input = args[0];
-    String fileExtension = input.substring(input.lastIndexOf(".") + 1).toLowerCase();
-    String output = "output." + fileExtension;
+    String output = args[1];
+    // String fileExtension = input.substring(input.lastIndexOf(".") + 1).toLowerCase();
+    // String output = "output." + fileExtension;
     // String input = "input.xml";
     // String output = "output.xml";
     
     ParserProcessor processor = new ParserProcessor(input, output);
-    switch (fileExtension) {
-      case "csv":
-        processor.setParser(new CSVParserImpl());
-        break;
-      case "json":
-        processor.setParser(new JSONParserImpl());
-        break;
-      case "xml":
-        processor.setParser(new XMLParserImpl());
-        break;
-      default:
-        throw new Exception("Unsupported file format");
-    }
+    // switch (fileExtension) {
+    //   case "csv":
+    //     processor.setParser(new CSVParserImpl());
+    //     break;
+    //   case "json":
+    //     processor.setParser(new JSONParserImpl());
+    //     break;
+    //   case "xml":
+    //     processor.setParser(new XMLParserImpl());
+    //     break;
+    //   default:
+    //     throw new Exception("Unsupported file format");
+    // }
     // if (input.endsWith(".csv")){
     //   processor.setParser(new CSVParserImpl());
     // } else if (input.endsWith(".json")){
@@ -37,6 +38,17 @@ public class Main{
     // else {
     //   throw new Exception("Unsupported file format");
     // }
+
+    if (input.endsWith(".csv")){
+      processor.setParser(new CSVParserImpl());
+    } else if (input.endsWith(".json")){
+      processor.setParser(new JSONParserImpl());
+    } else if (input.endsWith(".xml")){
+      processor.setParser(new XMLParserImpl());
+    }
+    else {
+      throw new Exception("Unsupported file format");
+    }
 
     processor.processData();
     // Example usage:

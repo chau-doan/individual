@@ -12,10 +12,7 @@
       "jdkPath": "${env:JAVA_HOME}/bin",
       "cwd": "${fileDirname}",
       "startupClass": "${fileBasenameNoExtension}",
-      "classpath": [
-        ".",
-        "${fileDirname}"
-      ]
+      "classpath": [".", "${fileDirname}"]
     },
     {
       "name": "Java Console App",
@@ -25,10 +22,7 @@
       "jdkPath": "${env:JAVA_HOME}/bin",
       "cwd": "${fileDirname}",
       "startupClass": "${fileBasenameNoExtension}",
-      "classpath": [
-        ".",
-        "${fileDirname}"
-      ],
+      "classpath": [".", "${fileDirname}"],
       "externalConsole": true
     },
     {
