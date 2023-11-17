@@ -8,8 +8,9 @@ import com.ltp.parser.XMLParserImpl;
 public class Main{
   public static void main(String[] args) throws Exception {
     String input = args[0];
-    String fileExtension = input.substring(input.lastIndexOf(".") + 1).toLowerCase();
-    String output = "output." + fileExtension;
+    String output = args[1];
+    // String fileExtension = input.substring(input.lastIndexOf(".") + 1).toLowerCase();
+    // String output = "output." + fileExtension;
     // String input = "input.xml";
     // String output = "output.xml";
     
