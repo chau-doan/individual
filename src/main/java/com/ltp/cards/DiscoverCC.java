@@ -2,8 +2,8 @@ package com.ltp.cards;
 
 public class DiscoverCC extends CreditCard{
   
-  public DiscoverCC(String cardNumber, String cardHolder, String expirationDate) {
-    super(cardNumber, cardHolder, expirationDate);
+  public DiscoverCC(String cardNumber, String cardHolderName, String expirationDate) {
+    super(cardNumber, cardHolderName, expirationDate);
   }
 
   @Override

@@ -32,7 +32,7 @@ public class ParserProcessor {
       List<Map<String, String>> inputData = parser.read(inputFileName);
 
       for (Map<String, String> entry : inputData){
-        CreditCardCreator creditCard = cardProcessor.createCreditCard(entry.get("cardNumber"), entry.get("cardHolder"), entry.get("expirationDate"));
+        CreditCardCreator creditCard = cardProcessor.createCreditCard(entry.get("cardNumber"), entry.get("cardHolderName"), entry.get("expirationDate"));
 
         if (creditCard != null){
           outputRecords.add(creditCard.generateOutput());

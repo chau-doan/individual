@@ -4,11 +4,11 @@ import com.ltp.cards.CreditCard;
 import com.ltp.cards.DiscoverCC;
 
 public class DiscoverCCFactory extends CreditCardCreator{
-  public DiscoverCCFactory(String cardNumber, String cardHolder, String expirationDate) {
-    super(cardNumber, cardHolder, expirationDate);
+  public DiscoverCCFactory(String cardNumber, String cardHolderName, String expirationDate) {
+    super(cardNumber, cardHolderName, expirationDate);
   }
 
-  protected CreditCard createCreditCard(String cardNumber, String cardHolder, String expirationDate) {
-    return new DiscoverCC(cardNumber, cardHolder, expirationDate);
+  protected CreditCard createCreditCard(String cardNumber, String cardHolderName, String expirationDate) {
+    return new DiscoverCC(cardNumber, cardHolderName, expirationDate);
   }
 }

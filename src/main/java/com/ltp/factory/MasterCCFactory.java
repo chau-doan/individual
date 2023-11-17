@@ -4,11 +4,11 @@ import com.ltp.cards.CreditCard;
 import com.ltp.cards.MasterCC;
 
 public class MasterCCFactory extends CreditCardCreator{
-  public MasterCCFactory(String cardNumber, String cardHolder, String expirationDate) {
-    super(cardNumber, cardHolder, expirationDate);
+  public MasterCCFactory(String cardNumber, String cardHolderName, String expirationDate) {
+    super(cardNumber, cardHolderName, expirationDate);
   }
 
-  protected CreditCard createCreditCard(String cardNumber, String cardHolder, String expirationDate) {
-    return new MasterCC(cardNumber, cardHolder, expirationDate);
+  protected CreditCard createCreditCard(String cardNumber, String cardHolderName, String expirationDate) {
+    return new MasterCC(cardNumber, cardHolderName, expirationDate);
   }
 }

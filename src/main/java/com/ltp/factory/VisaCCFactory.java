@@ -4,11 +4,11 @@ import com.ltp.cards.CreditCard;
 import com.ltp.cards.VisaCC;
 
 public class VisaCCFactory extends CreditCardCreator{
-  public VisaCCFactory(String cardNumber, String cardHolder, String expirationDate) {
-    super(cardNumber, cardHolder, expirationDate);
+  public VisaCCFactory(String cardNumber, String cardHolderName, String expirationDate) {
+    super(cardNumber, cardHolderName, expirationDate);
   }
 
-  protected CreditCard createCreditCard(String cardNumber, String cardHolder, String expirationDate) {
-    return new VisaCC(cardNumber, cardHolder, expirationDate);
+  protected CreditCard createCreditCard(String cardNumber, String cardHolderName, String expirationDate) {
+    return new VisaCC(cardNumber, cardHolderName, expirationDate);
   }
 }

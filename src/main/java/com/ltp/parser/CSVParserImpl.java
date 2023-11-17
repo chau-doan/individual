@@ -19,7 +19,7 @@ public List<Map<String, String>> read(String inputFileName) {
         for (CSVRecord csvRecord : csvParser) {
             Map<String, String> record = new HashMap<>();
             record.put("cardNumber", csvRecord.get("cardNumber"));
-            record.put("cardHolder", csvRecord.get("cardHolderName"));
+            record.put("cardHolderName", csvRecord.get("cardHolderName"));
             record.put("expirationDate", csvRecord.get("expirationDate"));
             records.add(record);
         }

@@ -11,11 +11,11 @@ import lombok.Setter;
 public abstract class CreditCardCreator {
   private CreditCard creditCard;
 
-  public CreditCardCreator(String cardNumber, String cardHolder, String expirationDate) {
-    creditCard = createCreditCard(cardNumber, cardHolder, expirationDate);
+  public CreditCardCreator(String cardNumber, String cardHolderName, String expirationDate) {
+    creditCard = createCreditCard(cardNumber, cardHolderName, expirationDate);
   }
 
-  protected abstract CreditCard createCreditCard(String cardNumber, String cardHolder, String expirationDate);
+  protected abstract CreditCard createCreditCard(String cardNumber, String cardHolderName, String expirationDate);
   
   
   public Map<String, String> generateOutput() {

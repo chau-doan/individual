@@ -8,12 +8,12 @@ import com.ltp.cards.CreditCard;
 public class ErrorCCFactory extends CreditCardCreator {
   String cardNumber;
   
-  public ErrorCCFactory(String cardNumber, String cardHolder, String expirationDate) {
-    super(cardNumber, cardHolder, expirationDate);
+  public ErrorCCFactory(String cardNumber, String cardHolderName, String expirationDate) {
+    super(cardNumber, cardHolderName, expirationDate);
     this.cardNumber = cardNumber;
   }
 
-  protected CreditCard createCreditCard(String cardNumber, String cardHolder, String expirationDate) {
+  protected CreditCard createCreditCard(String cardNumber, String cardHolderName, String expirationDate) {
     return null;
   }
 

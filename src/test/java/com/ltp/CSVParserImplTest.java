@@ -6,6 +6,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -19,11 +22,12 @@ public class CSVParserImplTest {
     @Test
     public void testRead() {
         // Test data
-        String inputFilePath = "input.csv";
+        String inputFilePath = "input_test.csv";
         List<Map<String, String>> testData = List.of(
                 Map.of("cardNumber", "123456789", "cardHolderName", "John Doe", "expirationDate", "12/25"),
                 Map.of("cardNumber", "987654321", "cardHolderName", "Jane Smith", "expirationDate", "10/23")
         );
+
 
         // Create a test CSV file for input
         createTestCSVFile(inputFilePath, testData);
@@ -34,6 +38,8 @@ public class CSVParserImplTest {
 
             // Test read method
             List<Map<String, String>> parsedData = csvParser.read(inputFilePath);
+        
+            assertEquals(testData, parsedData);
         } finally {
             // Clean up: delete the test input file
             deleteTestFile(inputFilePath);

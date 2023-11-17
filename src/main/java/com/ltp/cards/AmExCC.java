@@ -2,8 +2,8 @@ package com.ltp.cards;
 
 public class AmExCC extends CreditCard{
   
-  public AmExCC(String cardNumber, String cardHolder, String expirationDate) {
-    super(cardNumber, cardHolder, expirationDate);
+  public AmExCC(String cardNumber, String cardHolderName, String expirationDate) {
+    super(cardNumber, cardHolderName, expirationDate);
   }
 
   public boolean isValid() {
