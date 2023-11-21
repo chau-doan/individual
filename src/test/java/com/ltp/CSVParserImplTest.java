@@ -6,9 +6,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -48,7 +45,7 @@ public class CSVParserImplTest {
     @Test
     public void testWrite() {
         // Test data
-        String outputFilePath = "output.csv";
+        String outputFilePath = "output_test.csv";
         List<Map<String, String>> testData = List.of(
                 Map.of("cardNumber", "123456789", "cardType", "VISA"),
                 Map.of("cardNumber", "987654321", "cardType", "MasterCard")

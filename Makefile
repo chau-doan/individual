@@ -5,7 +5,7 @@ test:
 	mvn test
 
 run:
-	mvn package
+	mvn packagemskr
 	java -jar ./target/individual-project-1.0-SNAPSHOT.jar ${input} ${output}
 
 csv:
