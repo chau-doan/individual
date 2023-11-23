@@ -24,8 +24,8 @@ public class JSONParserImpl implements CreditCardParser{
             for (Map<String, String> jsonRecord : cards) {
                 Map<String, String> record = new HashMap<>();
                 record.put("cardNumber", jsonRecord.get("cardNumber"));
-                record.put("expirationDate", "");
-                record.put("cardHolderName", "");
+                record.put("expirationDate", jsonRecord.get("expirationDate"));
+                record.put("cardHolderName", jsonRecord.get("cardHolderName"));
                 records.add(record);
             }
         } catch (IOException e) {
@@ -46,7 +46,4 @@ public class JSONParserImpl implements CreditCardParser{
             e.printStackTrace();
         }
     }
-
- 
-
 }
