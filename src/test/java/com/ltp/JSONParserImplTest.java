@@ -53,8 +53,8 @@ public class JSONParserImplTest {
         // Test data
         String outputFilePath = "output_test.json";
         List<Map<String, String>> testData = List.of(
-            Map.of("cardNumber", "123456789", "expirationDate", "12/25", "cardHolderName", "John Doe"),
-            Map.of("cardNumber", "987654321", "expirationDate", "10/23", "cardHolderName", "Jane Smith")
+            Map.of("cardType", "VISA", "cardNumber", "123456789"),
+            Map.of("cardType", "MasterCard", "cardNumber", "987654321")
         );
 
         try {
@@ -70,17 +70,13 @@ public class JSONParserImplTest {
             // Adjust the expected format to match the actual content
             String expectedJsonForWrite = """
                 {
-                    "cards": [
-                        {
-                            "cardNumber": "123456789",
-                            "expirationDate": "12/25",
-                            "cardHolderName": "John Doe"
-                        },
-                        {
-                            "cardNumber": "987654321",
-                            "expirationDate": "10/23",
-                            "cardHolderName": "Jane Smith"
-                        }
+                    "cards" : [ {
+                        "cardType" : "VISA",
+                        "cardNumber" : "123456789"
+                    }, {
+                        "cardType" : "MasterCard",
+                        "cardNumber" : "987654321"
+                    }
                     ]
                 }
                 """.trim();
