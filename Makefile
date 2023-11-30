@@ -4,9 +4,17 @@ rebuild:
 test:
 	mvn test
 
-run:
-	mvn packagemskr
+run-and-build:
+	mvn package
 	java -jar ./target/individual-project-1.0-SNAPSHOT.jar ${input} ${output}
+
+run:
+	java -jar ./target/individual-project-1.0-SNAPSHOT.jar ${input} ${output}
+ifeq ($(OS),Windows_NT)
+	type ${output}
+else
+	cat ${output}
+endif
 
 csv:
 	mvn package
@@ -35,3 +43,4 @@ else
 	cat output.json
 endif
 
+.PHONY: run-and-build run test rebuild

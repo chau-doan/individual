@@ -6,7 +6,6 @@ import lombok.*;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-
 public abstract class CreditCard {
   private String cardNumber;
   private String cardHolderName;
