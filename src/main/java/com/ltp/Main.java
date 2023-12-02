@@ -10,10 +10,8 @@ public class Main{
     String input = args[0];
     String output = args[1];
     
-    
+
     ParserProcessor processor = new ParserProcessor(input, output);
-    
-  
 
     if (input.endsWith(".csv")){
       processor.setParser(new CSVParserImpl());
