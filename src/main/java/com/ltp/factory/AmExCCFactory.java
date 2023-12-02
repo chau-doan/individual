@@ -8,7 +8,7 @@ public class AmExCCFactory extends CreditCardCreator{
     super(cardNumber, cardHolderName, expirationDate);
   }
 
-  protected CreditCard createCreditCard(String cardNumber, String cardHolderName, String expirationDate) {
+  public CreditCard createCreditCard(String cardNumber, String cardHolderName, String expirationDate) {
     return new AmExCC(cardNumber, cardHolderName, expirationDate);
   }
 }
